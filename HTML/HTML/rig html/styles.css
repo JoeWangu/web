@@ -1,0 +1,29 @@
+head{
+    color:blue;border:1px solid red;
+}
+h1{
+    color:blue;border:5px solid red;
+    vertical-align: top;
+    size: 10opx;
+    background-color: rgb(0, 255, 157);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ul#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    word-spacing: 20px;
+    }
+    body {
+        background-color: rgb(51, 116, 138);
+      }
+      
+      h2 {
+        color: white;
+        text-align: center;
+      }
+      
+      p1 {
+        font-family: verdana;
+        font-size: 20px;
+      }

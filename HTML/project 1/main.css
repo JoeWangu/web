@@ -1,0 +1,26 @@
+h1 {
+    padding: 20px;
+    background-color: blue;
+    align-self: center;
+    vertical-align: top;
+    text-align: center;
+    
+}
+
+ul ,li {
+text-align: center ;
+color: red;
+display: inline;
+}
+
+
+nav.gate.main{
+    background-color: #a52a2a;
+    }
+
+body {
+    background-color: #808080;
+}
+.emphasis{
+    color: green;
+}

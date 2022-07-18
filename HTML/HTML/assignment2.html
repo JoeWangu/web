@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <link href="CSS\style1.css" type="text/css" rel="stylesheet"/>
+        <title>HOSPITAL RECORDS</title>
+    </head>
+
+    <body>
+        <h1>PATIENTS DETAIL</h1>
+        <form action="">
+            <fieldset>
+                <legend>
+                    Your Personal Details:
+                </legend>
+                NAME:
+                <input type="text" name="name" size="30" maxlength="50"
+                    style="margin-bottom: 10px">
+                <br />
+                ID:
+                <input type="text" name="ID" size="30" maxlength="20"
+                    style="margin-left: 30px" ;>
+                <br />
+                <p>select your gender:</p>
+                Male:
+                <input type="radio" value="male" name="gender" checked>
+                Female:
+                <input type="radio" value="female" name="gender">
+                <br />
+                <p>Select the county you are from</p>
+                <select name="counties">
+                    <option value="Kirinyaga" selected="selected">Kirinyaga</option>
+                    <option value="Nyeri">Nyeri</option>
+                    <option value="Embu">Embu</option>
+                    <option value="Meru">Meru</option>
+                    <option value="Nairobi">Nairobi</option>
+                    <option value="Machakos">Machakos</option>
+                    <option value="Kilifi">Kilifi</option>
+                    <option value="Kisii">Kisii</option>
+                    <option value="Narok">Narok</option>
+                    <option value="Nakuru">Nakuru</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Medical History
+                </legend>
+                <textarea name="Medical History" id="Medical History"
+                    placeholder="Type your medical history here..."
+                    cols="30" rows="10" style="width:1262px" height="164px"></textarea>
+            </fieldset>
+
+            <button type="submit" value="Submit Form">Submit</button>
+            <button type="reset" value="Cancel Form">reset</button>
+            <button type="cancel" value="Cancel Form">cancel</button>
+        </form>
+        <footer>&copy;</footer>
+    </body>
+
+</html>
