@@ -1,31 +1,53 @@
-h1 {
-    padding: 20px;
-    background-color: #00ff2a4b;
-    align-self: center;
-    vertical-align: top;
-    text-align: center;
+#nav {
+    background-color: rgb(0, 183, 255);
+}
 
+#nav nav {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    justify-content: space-around;
 }
 
 ul,
 li {
     text-align: center;
-    color: rgb(136, 77, 77);
     display: inline;
+    padding: 0px 5px;
 }
 
+#nav a {
+    color: black;
+}
+
+#nav i {
+    color: chocolate;
+}
+
+h1 {
+    padding: 20px;
+    background-color: #0dff0d4b;
+    align-self: center;
+    vertical-align: top;
+    text-align: center;
+    margin: 5px 0em;
+
+}
+
+.login fieldset {
+    margin: auto;
+    width: 300px;
+    border: none;
+}
+
+legend{
+    text-transform: uppercase;
+}
 
 nav.gate.main {
-    background-color: #a52a2a;
+    background-color: #776161;
 }
 
 .emphasis {
     color: green;
-}
-
-.loginav {
-    display: flex;
-    flex-direction: column;
-    float: right;
-    justify-content: space-around;
 }
