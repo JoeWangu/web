@@ -1,26 +1,35 @@
-h1 {
-    padding: 20px;
-    background-color: blue;
-    align-self: center;
-    vertical-align: top;
-    text-align: center;
+body {
     
 }
 
-ul ,li {
-text-align: center ;
-color: red;
-display: inline;
+h1 {
+    padding: 20px;
+    background-color: #00ff2a4b;
+    align-self: center;
+    vertical-align: top;
+    text-align: center;
+
+}
+
+ul,
+li {
+    text-align: center;
+    color: rgb(136, 77, 77);
+    display: inline;
 }
 
 
-nav.gate.main{
+nav.gate.main {
     background-color: #a52a2a;
-    }
-
-body {
-    background-color: #808080;
 }
-.emphasis{
+
+.emphasis {
     color: green;
+}
+
+.loginav {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    justify-content: space-around;
 }
