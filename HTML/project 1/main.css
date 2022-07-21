@@ -1,6 +1,12 @@
-#nav {
-    background-color: rgb(0, 183, 255);
+body {
+    background: url(pics/img2.jpg) no-repeat scroll center;
+    background-size: cover;
+    position: relative;
 }
+
+/* #nav {
+    background-color: rgb(0, 183, 255);
+} */
 
 #nav nav {
     display: flex;
@@ -17,41 +23,84 @@ li {
 }
 
 #nav a {
-    color: black;
+    color: #000000;
+    border-radius: 5px;
 }
 
 #nav i {
-    color: chocolate;
+    color: #000000;
+    size: 5px;
 }
 
-h1 {
+.nav-home,
+.nav-videos,
+.nav-portfolio,
+.nav-blog,
+.nav-contact {
+    color: #000000;
+    padding: 10px 25px;
+    background-color: #124c5f;
+    font-weight: bold;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    text-transform: capitalize;
+}
+
+.nav-home {
+    background-color: #ffe4c4;
+}
+
+/* h1 {
     padding: 20px;
-    background-color: #0dff0d4b;
+    background-color: #eb0dff4b;
     align-self: center;
     vertical-align: top;
     text-align: center;
-    margin: 5px 0em;
+    margin: 5px 0em; 
 
-}
+} */
 
-.login fieldset {
+#main fieldset {
     margin: auto;
     width: 300px;
+    height: fit-content;
+    border-radius: 5px;
+    margin-top: 3em;
     /* border: none; */
 }
 
-legend{
+#main p {
+    color: #000000;
+    padding-top: 5px;
     text-transform: uppercase;
 }
 
-#main a{
-padding: 5px;
+legend {
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
-#main input{
+.log{
     padding: 5px;
-    margin: 5px;
+    background-color: #124c5f;
+    color: #000000;
+    margin: 4em 5px;
+    border-radius: 5px;
 }
+
+#main a{
+    margin-bottom: 10px;
+}
+
+#main .inputext input {
+    padding: 15px;
+    margin: 10px 5px;
+}
+
+#foot {
+    margin: 6em 5px;
+}
+
 /* nav.gate.main {
     background-color: #776161;
 }
@@ -59,3 +108,8 @@ padding: 5px;
 .emphasis {
     color: green;
 } */
+
+/* background-color: #ffe4c4;
+    color: #3391ff;
+    font-weight: 500;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2); */

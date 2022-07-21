@@ -1,51 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGN UP</title>
-    <link rel="stylesheet" href="login.css">
-</head>
-<body>
-    <header>LOGO</header>
-    <nav class="">
-      <ul>
-        <li>home</li>
-        <li>videos</li>
-        <li>portfolio</li>
-        <li>blog</li>
-        <li>contact us</li>
-      </ul>
-    </nav> <br>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous">
+  </head>
+  <body>
+    <section id="nav">
+      <a href="#">
+          <img src="pics/l1.png" alt="LOGO" width="100px">
+      </a>
+      <nav>
+          <ul>
+              <li>
+                  <a href="#" class="nav-home">
+                      <i class="fas fa-home"></i>
+                      home
+                  </a>
+              </li>
 
-    <h1>MY SECOND HTML PAGE</h1> <br>
-    <h4>sign up page</h4> <br>
+              <li>
+                  <a href="#" class="nav-videos">
+                      <i class="fas fa-video"></i>
+                      videos
+                  </a>
+              </li>
 
-    <a href="START HERE" class="start">START HERE</a>
-    <a href="SUBSCRIBE TO US" class="sub">SUBSCRIBE TO US</a> <br>
+              <li>
+                  <a href="#" class="nav-portfolio">
+                      portfolio
+                      <i class="fas fa-book"></i>
+                  </a>
+              </li>
 
-    <label for="first-name">First Name</label>
-    <input type="text" name="first-name" id="first-name"> <br>
+              <li>
+                  <a href="#" class="nav-blog">
+                      blog
+                      <i class="fas fa-award"></i>
+                  </a>
+              </li>
 
-    <label for="last-name">Last Name</label>
-    <input type="text" name="last-name" id="last-name"> <br>
+              <li>
+                  <a href="#" class="nav-contact">
+                      contact us
+                      <i class="fas fa-phone"></i>
+                  </a>
+              </li>
+          </ul>
+      </nav> <br>
+  </section>
 
-    <label for="password">password</label>
-    <input type="password" name="password" id="password" maxlength="30" size="30"> <br>
+    <section id="main">
+      <div>
+        <fieldset>
 
-    <label for="username">username</label>
-    <input type="text" name="username" id="username" maxlength="20" size="30"> <br>
+          <legend>sign up page</legend>
+          <a href="#" class="log">START HERE</a>
+          <a href="#" class="log">SUBSCRIBE TO US</a>
+          <br>
 
-    
-    <label for="confirm-password">Confirm password</label>
-    <input type="text" name="confirm-password" id="confirm-password">
+          <div class="inputext">
+          <input type="text" name="FirstName" id="FirstName"
+            maxlength="20" placeholder="Enter your firstname"
+            size="30"> <br>
 
-    <input type="submit" value="login"> <br>
-    <p>already have an account</p> <br>
-    <a href="login.html">Log-In</a>
-    <a href="home.html">home</a>
+          <input type="text" name="LastName" id="LastName"
+            maxlength="20" placeholder="Enter your lastname"
+            size="30"> <br>
+
+          <input type="text" name="username" id="username"
+            maxlength="20" placeholder="Enter your username"
+            size="30"> <br>
+
+          <input type="password" name="password" id="password"
+            maxlength="30" placeholder="Password"
+            size="30"> <br>
+
+          <input type="text" name="ConfirmPassword" id="ConfirmPassword"
+            maxlength="30" placeholder="confirm-password"
+            size="30"> <br>
+
+          </div>
+
+          <div class="subset">
+          <input type="submit" value="signup">
+          <input type="reset" value="reset"> <br>
+          <p>already have an account</p> <br>
+          <a href="login.html">Log In</a> <br>
+        </div>
+
+        </fieldset>
+      </div>
+    </section>
+
+    <section id="foot">
+      <footer>DEVELOPER</footer>
+      <footer>Sleep J.Addict</footer>
+      <footer><a href="index.html">index</a></footer>
+  </section>
 
     <script src="jquery-3.6.0.js"></script>
-</body>
+  </body>
 </html>

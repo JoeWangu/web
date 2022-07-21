@@ -19,57 +19,78 @@
             <nav>
                 <ul>
                     <li>
-                        <i class="fas fa-home"></i>
-                        <a href="#">home</a>
+                        <a href="#" class="nav-home">
+                            <i class="fas fa-home"></i>
+                            home
+                        </a>
                     </li>
+
                     <li>
-                        <i class="fas fa-video"></i>
-                        <a href="#">videos</a>
+                        <a href="#" class="nav-videos">
+                            <i class="fas fa-video"></i>
+                            videos
+                        </a>
                     </li>
+
                     <li>
-                        <i class="fas fa-book"></i>
-                        <a href="#">portfolio</a>
+                        <a href="#" class="nav-portfolio">
+                            portfolio
+                            <i class="fas fa-book"></i>
+                        </a>
                     </li>
+
                     <li>
-                        <i class="fas fa-award"></i>
-                        <a href="#">blog</a>
+                        <a href="#" class="nav-blog">
+                            blog
+                            <i class="fas fa-award"></i>
+                        </a>
                     </li>
+
                     <li>
-                        <i class="fas fa-phone"></i>
-                        <a href="#">contact us</a>
+                        <a href="#" class="nav-contact">
+                            contact us
+                            <i class="fas fa-phone"></i>
+                        </a>
                     </li>
                 </ul>
             </nav> <br>
         </section>
 
         <section id="main">
-
-            <h1>MY FIRST HTML PAGE</h1> <br>
-
-            <div class="login">
+            <div>
                 <fieldset>
+
                     <legend>login page</legend>
-                    <a href="#" class="start">START HERE</a>
-                    <a href="#" class="sub">SUBSCRIBE TO US</a>
+                    <a href="#" class="log">START HERE</a>
+                    <a href="#" class="log">SUBSCRIBE TO US</a>
                     <br>
 
-                    <input type="text" name="username" id="username"
-                        maxlength="20" placeholder="Enter your name"
-                        size="30"> <br>
+                    <div class="inputext">
+                        <input type="text" name="username" id="username"
+                            maxlength="20" placeholder="Enter your username"
+                            size="30"> <br>
 
-                    <input type="password" name="password" id="password"
-                        maxlength="30" placeholder="Password"
-                        size="30"> <br>
+                        <input type="password" name="password" id="password"
+                            maxlength="30" placeholder="Password"
+                            size="30"> <br>
+                    </div>
 
-                    <input type="submit" value="login"> <br>
-                    <p>Do not have an account</p> <br>
-                    <a href="sign-up.html">Sign-Up</a> <br>
+                    <div class="subset">
+                        <input type="submit" value="login">
+                        <input type="reset" value="reset"> <br>
+                        <p>Do not have an account</p> <br>
+                        <a href="sign-up.html">Sign-Up</a> <br>
+                    </div>
+
                 </fieldset>
             </div>
         </section>
-        <footer>DEVELOPER</footer>
-        <footer>Sleep J.Addict</footer>
-        <footer><a href="index.html">index</a></footer>
+
+        <section id="foot">
+            <footer>DEVELOPER</footer>
+            <footer>Sleep J.Addict</footer>
+            <footer><a href="index.html">index</a></footer>
+        </section>
 
         <script src="jquery-3.6.0.js"></script>
     </body>
