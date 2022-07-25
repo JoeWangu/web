@@ -1,5 +1,5 @@
 body {
-    background: url(pics/img2.jpg) no-repeat scroll center;
+    background: url(pics/pic14.jpg);
     background-size: cover;
     position: relative;
 }
@@ -78,14 +78,6 @@ legend {
     text-transform: uppercase;
     color: rgb(0, 0, 0);
     font-weight: bold;
-}
-
-.log{
-    padding: 5px;
-    background-color: #124c5f;
-    color: #000000;
-    margin: 4em 5px;
-    border-radius: 5px;
 }
 
 #main a{
