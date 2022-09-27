@@ -1,0 +1,216 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: consolas;
+}
+
+body {
+	background: #222;
+	height: 100vh;
+	padding-top: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+::selection {
+	color: #222;
+	background: #ddd;
+}
+
+.generator {
+	width: 400px;
+	height: 400px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.generator p {
+	color: #ddd;
+	font-size: 24px;
+}
+
+.generator > input {
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	background: none;
+	outline: none;
+	border: 2px solid #ddd;
+	border-radius: 8px;
+	color: #ddd;
+	font-size: 18px;
+	letter-spacing: 1px;
+	transition: 0.2s;
+}
+
+.generator > input.active {
+	border-color: #4dff4d;
+}
+
+.generator .buttons {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.generator button {
+	position: relative;
+	padding: 10px 20px;
+	border-radius: 10px;
+	text-transform: capitalize;
+	background: #0084ff;
+	color: #ddd;
+	border: none;
+	cursor: pointer;
+	letter-spacing: 1px;
+	font-size: 18px;
+	font-weight: bold;
+	transition: 0.2s;
+}
+
+.generator button:hover {
+	background: #0d72d1;
+}
+
+.generator #btncp::before {
+	position: absolute;
+	content: "Copied";
+	top: 50%;
+	left: -50px;
+	transform: translateY(-50%);
+	color: #4dff4d;
+	transition: 0.2s;
+	z-index: -1;
+	opacity: 0;
+}
+
+.generator input.active ~ .buttons #btncp::before {
+	left: -70px;
+	opacity: 1;
+}
+
+.generator .setting {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	height: 200px;
+}
+
+.generator .setting .option {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.generator .setting .option label {
+	position: relative;
+	width: 150px;
+	color: #ddd;
+	padding: 10px 0;
+	user-select: none;
+}
+
+.generator .setting .option input[type="range"] {
+	-webkit-appearance: none;
+	margin-right: 15px;
+	width: 200px;
+	height: 7px;
+	background: #ddd;
+	border-radius: 5px;
+	background-image: linear-gradient(#0084ff, #0084ff);
+	background-size: 25% 100%;
+	background-repeat: no-repeat;
+}
+
+.generator .setting .option input[type="range"]::-webkit-slider-thumb {
+	position: relative;
+	-webkit-appearance: none;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background: #0084ff;
+	cursor: pointer;
+	box-shadow: 0 0 2px 0 #6cb8ff;
+	transition: 0.3s ease-in-out;
+}
+
+.generator .setting .option input[type="range"]::-webkit-slider-thumb:hover {
+	background-color: #2495ff;
+}
+
+.generator .setting .option span {
+	color: #ddd;
+}
+
+.generator input[type="checkbox"] {
+	position: absolute;
+	opacity: 0;
+}
+
+.generator input + label::before,
+.generator input + label::after {
+	content: "";
+	position: absolute;
+	right: -50px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: 0.1s linear;
+	cursor: pointer;
+}
+
+.generator input + label::before {
+	width: 50px;
+	height: 25px;
+	border-radius: 25px;
+	background-color: rgba(200, 200, 200, 0.4);
+	border: 2px solid #ddd;
+}
+
+.generator input + label::after {
+	height: 22px;
+	width: 22px;
+	background-color: #ddd;
+	right: -22px;
+	border-radius: 22px;
+}
+
+.generator input:checked + label::before {
+	background: #0084ff;
+}
+
+.generator input:checked + label::after {
+	right: -46px;
+}
+.generator input:disabled + label::after {
+	cursor: auto;
+}
+.generator input:disabled + label::before {
+	background: #333;
+	cursor: auto;
+}
+
+/* YouTube icon */
+#ytb {
+	position: absolute;
+	height: 70px;
+	width: 70px;
+	top: calc(50% - 35px);
+	left: 10px;
+	text-align: center;
+	line-height: 70px;
+	border: 2px solid transparent;
+	color: #ff1717;
+	font-size: 30px;
+	transition: 0.2s;
+}
+
+#ytb:hover {
+	border-radius: 50%;
+	border-color: #ff1717;
+	box-shadow: 0 0 10px #ff4040;
+}

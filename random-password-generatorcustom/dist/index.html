@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Random Password Generator - Custom  </title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="generator">
+	<p>Random Password</p>
+	<input type="text" placeholder="Password" id="result">
+	<div class="buttons">
+		<button id="btn">Generate</button>
+		<button id="btncp">Copy</button>
+	</div>
+	<div class="setting">
+
+		<div class="option">
+			<label>Length: </label>
+			<input type="range" id="passLength" min="6" max="30" value="12" oninput="rangeNumber.innerText=value">
+			<span id="rangeNumber">12</span>
+		</div>
+
+		<div class="option">
+			<input type="checkbox" id="lowerCase" checked>
+			<label for="lowerCase">Lower Case: </label>
+		</div>
+
+		<div class="option">
+			<input type="checkbox" id="upperCase" checked>
+			<label for="upperCase">Upper Case: </label>
+		</div>
+
+		<div class="option">
+			<input type="checkbox" id="number" checked>
+			<label for="number">Numbers: </label>
+		</div>
+
+		<div class="option">
+			<input type="checkbox" id="symbol" checked>
+			<label for="symbol">Symbols: </label>
+		</div>
+	</div>
+</div>
+
+<a href="https://www.youtube.com/c/ShortCode" target="_blank" id="ytb">
+	<i class="fab fa-youtube"> </i>
+</a>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

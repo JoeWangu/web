@@ -1,0 +1,4 @@
+cd desktop\joe\code\web\javascript
+dir
+explorer .
+node main2.js
