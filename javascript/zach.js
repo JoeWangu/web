@@ -262,4 +262,4 @@ function forloops2() {
 }
 
 
-console.log(forloops2());
+console.log(forloops1());

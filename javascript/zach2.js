@@ -100,4 +100,8 @@ function loops4() {
 console.log(output);
 }
 
+
+
+
+
 console.log(loops4());
