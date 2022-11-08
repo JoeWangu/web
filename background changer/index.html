@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <script>
+        function changebg() {
+            var color = document.getElementById('bg').value;
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="color" id="bg" placeholder="name/hexcode/rgba">
+    <button onclick="changebg()">change background</button>
+
+</body>
+</html>

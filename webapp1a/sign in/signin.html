@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="btn-box">
+                <div id="btn"></div>
+                <button type="button" onclick="login()" class="toggle-btn">Log In</button>
+                <button type="button" onclick="register()" class="toggle-btn">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="/pics/icons/fb-white.png" alt="FB">
+                <img src="/pics/icons/IG.png" alt="IG">
+                <img src="/pics/icons/YT.png" alt="YT">
+            </div>
+            <form action="" method="POST" class="input-group" id="login">
+                <input type="text" name="reg_no" class="input-field" placeholder="Registration Number" maxlength="30"
+                    size="30">
+                <br>
+                <input type="password" name="password" class="input-field" placeholder="Password" maxlength="30"
+                    size="30">
+                <br>
+                <input type="checkbox" name="" id="" class="check-box"><span> Remember Password</span>
+                <button type="submit" class="submit-btn">login</button>
+            </form>
+
+            <form action="" method="post" class="input-group" id="register">
+                <input type="text" name="f-name" class="input-field" placeholder="First Name" maxlength="30" size="30">
+                <br>
+                <input type="text" name="l-name" class="input-field" placeholder="Last Name" maxlength="30" size="30">
+                <br>
+                <input type="text" name="phone-number" class="input-field" placeholder="Phone Number" maxlength="30" size="30">
+                <br>
+                <input type="email" name="email" class="input-field" placeholder="Email" maxlength="30" size="30"> <br>
+                <input type="password" name="password" class="input-field" placeholder="Password" maxlength="30"
+                size="30"> <br>
+                <input type="checkbox" name="" id="" class="check-box"><span> I agree to the terms and conditions</span>
+                <button type="submit" class="submit-btn">register</button>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -60,3 +60,14 @@ function makeCoffee(sugar,milk) {
 // }
 
 // console.log(arraysobjects())
+
+
+var object = {
+    prop: this,
+    method: function () { return this }
+};
+
+var array = [
+    this,
+    function () { return this; }
+];
