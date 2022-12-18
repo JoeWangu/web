@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>ExamPractice</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <input type="text" placeholder="type your name" id="namely" onkeyup="userSubmit()">
+    <!-- <button type="submit" >submit</button> -->
+    <div id="js1"></div>
+
+    Hello World!
+    <p>Say what?</p><input id="sayThis" size=40>
+    <P>How many times? </P>
+    <select id='howMany'>
+        <option value=1>1</option>
+        <option value=5 selected>5</option>
+        <option value=10>10</option>
+        <option value=20>20</option>
+    </select>
+    <button onClick='doLoop()'>Do It!</button>
+    <div id="results"></div>
+
+
+    <script type="text/javascript">
+        function userSubmit() {
+            var names = document.getElementById('namely').value;
+            document.getElementById('js1').innerHTML = 'hello there your name is ' + names;
+        }
+        function doLoop() {
+            var sayWhat = document.getElementById('sayThis').value;
+            var maxLoop = document.getElementById('howMany').value;
+            var str = ''; // where we'll store our output temporarily.
+            for (var i = 1; (i <= maxLoop); i++) {
+                str = str + i + ':' + sayWhat + '<br>';
+            }
+            document.getElementById("results").innerHTML = str;
+            element.style.color = 'blue';
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
