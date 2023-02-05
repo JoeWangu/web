@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="inputs">
+    <form action="form.php" method="POST">
+        <h1>Patient Form</h1>
+        <input type="text" name="FirstName" id="FirstName" placeholder="FirstName" maxlength="30" size="30"> <br>
+        <input type="text" name="MiddleName" id="MiddleName" placeholder="MiddleName" maxlength="30" size="30"> <br>
+        <input type="text" name="LastName" id="LastName" placeholder="LastName" maxlength="30" size="30"> <br>
+        <input type="number" name="Age" id="age" placeholder="age" max="150" min="0" size="30"> <br>
+        <input type="email" name="Email" id="Email" placeholder="Email" maxlength="30" size="30"> <br>
+        <input type="number" name="IDNumber" id="IDNumber" placeholder="IDNumber" max="40000000" min="0" size="30"> <br>
+        <!-- <input type="text" name="phone_no" id="no" placeholder="phone number" maxlength="30" size="30"> <br> -->
+        <!-- <input type="radio" name="gender" value="male" id="gender" checked> <label>Male</label> -->
+        <!-- <input type="radio" name="gender" value="female" id="gender"> <label>Female</label> <br> -->
+        <button type="submit">submit</button>
+    </form>
+</div>
+</body>
+</html>
