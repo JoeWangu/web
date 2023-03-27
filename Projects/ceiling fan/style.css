@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #131313;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.fan{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.fan::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 10px solid #777;
+    background-image: radial-gradient(#fff, #bbb);
+}
+
+.blade{
+    position: absolute;
+    background-image: linear-gradient(115deg, #fff 0%,#bbb 74%);
+    height: 150px;
+    width: 50px;
+}
+
+.ceiling-fan1{
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50% 50% 10% 50% / 85% 85% 15% 15%;
+}
+
+.ceiling-fan2 {
+    right: 0;
+    left: 50%;
+    transform: translate(-50%) rotate(180deg);
+    border-radius: 50% 50% 10% 50% / 85% 85% 15% 15%;
+}
+
+.ceiling-fan3 {
+    top: 50%;
+    right: 0;
+    transform: translate(-100%, -50%) rotate(270deg);
+    border-radius: 50% 50% 10% 50% / 85% 85% 15% 15%;
+}
+
+.ceiling-fan4 {
+    top: 50%;
+    left: 0;
+    transform: translate(100%, -50%) rotate(90deg);
+    border-radius: 50% 50% 10% 50% / 85% 85% 15% 15%;
+}
+
+.fan:hover{
+    animation: spin 1s linear infinite;
+    cursor: no-drop;
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
