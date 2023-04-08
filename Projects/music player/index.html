@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="./assets/icons/site.webmanifest">
+    <link rel="stylesheet" href="./assets/icons/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="container">
+        <div class="player" style="background-color: #a0bef8!important;">
+
+            <!--  head of player container  -->
+            <div class="head">
+                <button class="back buttons">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </button>
+
+                <p class="head-text">Playing Now</p>
+
+                <button class="bars buttons">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!--  image and text of the music playing  -->
+            <div class="record">
+                <img src="./assets/media/profile.png" alt="mp" class="buttons">
+                <!-- mp = music playing -->
+
+                <p class="music-name">Low Life</p>
+                <p class="artist-name">Future ft The Weekend</p>
+            </div>
+
+            <!-- player container controls -->
+            <div class="controls">
+                <div class="progress-time">
+                    <p class="start-time">2:20</p>
+                    <p class="end-time">4:50</p>
+                </div>
+                <progress value="50" max="100">50%</progress>
+
+                <div class="controllers">
+                    <button class="prev buttons">
+                        <i class="fa-solid fa-backward"></i>
+                        <!-- <i class="fa-solid fa-backward-fast"></i> -->
+                    </button>
+                    <button class="play-pause buttons">
+                        <i class="fa-solid fa-play"></i>
+                        <!-- <i class="fa-solid fa-pause"></i> -->
+                    </button>
+                    <button class="next buttons">
+                        <i class="fa-solid fa-forward"></i>
+                        <!-- <i class="fa-solid fa-forward-fast"></i> -->
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <p id="date"></p>
+    </div>
+    <script src="./assets/js/main.js"></script>
+    <!-- <script src="./assets/icons/fontawesome-free-6.4.0-web/js/all.js"></script> -->
+</body>
+</html>

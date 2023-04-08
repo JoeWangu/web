@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* containers and common items */
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.player {
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.buttons{
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* head of player container */
+.head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+.back {
+    font-size: 10px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.bars {
+    font-size: 10px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.head-text {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    color: black;
+}
+
+/* image and text of the music playing */
+.record {
+    display: grid;
+    place-items: center;
+    height: 300px;
+}
+
+.record img {
+    width: 200px;
+    height: 200px;
+    background-color: darkgray;
+}
+
+.music-name {
+    font-size: 2em;
+}
+
+.artist-name {
+    font-size: 0.7em;
+    margin-top: -30px;
+}
+
+/* player container controls */
+.controls {
+    display: grid;
+    place-items: center;
+    height: calc(500px - 350px);
+}
+
+.progress-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 250px;
+}
+
+/* .start-time{
+}
+
+.end-time{
+
+} */
+
+progress {
+    width: 250px;
+    margin-top: -30px;
+}
+
+.controllers{
+    margin-top: -20px;
+}
+
+.prev {
+    width: 50px;
+    height: 50px;
+}
+
+.play-pause {
+    width: 80px;
+    height: 80px;
+    background-color: #ff4800a2;
+}
+
+.next {
+    width: 50px;
+    height: 50px;
+}
