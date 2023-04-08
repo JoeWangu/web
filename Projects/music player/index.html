@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Music Player</title>
 </head>
+
 <body>
     <div class="container">
         <div class="player" style="background-color: #a0bef8!important;">
@@ -22,7 +24,7 @@
                     <i class="fa-solid fa-arrow-left-long"></i>
                 </button>
 
-                <p class="head-text">Playing Now</p>
+                <p class="now-playing">Playing Now</p>
 
                 <button class="bars buttons">
                     <i class="fa-solid fa-bars"></i>
@@ -30,12 +32,12 @@
             </div>
 
             <!--  image and text of the music playing  -->
-            <div class="record">
-                <img src="./assets/media/profile.png" alt="mp" class="buttons">
+            <div class="track">
+                <img src="./assets/media/profile.png" alt="mp" class="track-img buttons">
                 <!-- mp = music playing -->
 
-                <p class="music-name">Low Life</p>
-                <p class="artist-name">Future ft The Weekend</p>
+                <p class="track-name">Low Life</p>
+                <p class="track-artist">Future ft The Weekend</p>
             </div>
 
             <!-- player container controls -->
@@ -44,18 +46,19 @@
                     <p class="start-time">2:20</p>
                     <p class="end-time">4:50</p>
                 </div>
-                <progress value="50" max="100">50%</progress>
+                <!-- <progress value="50" max="100">50%</progress> -->
+                <input type="range" min="1" max="100" value="0" id="progress" onchange="seekTo()">
 
                 <div class="controllers">
-                    <button class="prev buttons">
+                    <button class="prev buttons" onclick="prevTrack()">
                         <i class="fa-solid fa-backward"></i>
                         <!-- <i class="fa-solid fa-backward-fast"></i> -->
                     </button>
-                    <button class="play-pause buttons">
+                    <button class="play-pause buttons" onclick="playpauseTrack()">
                         <i class="fa-solid fa-play"></i>
                         <!-- <i class="fa-solid fa-pause"></i> -->
                     </button>
-                    <button class="next buttons">
+                    <button class="next buttons" onclick="nextTrack()">
                         <i class="fa-solid fa-forward"></i>
                         <!-- <i class="fa-solid fa-forward-fast"></i> -->
                     </button>
@@ -63,9 +66,17 @@
             </div>
         </div>
 
+        <!-- volume slider -->
+        <div class="slider-container">
+            <i class="fa fa-volume-down buttons"></i>
+            <input type="range" min="0" max="100" value="10" class="volume-slider" onchange="setVolume()">
+            <i class="fa fa-volume-up buttons"></i>
+        </div>
+
         <p id="date"></p>
     </div>
     <script src="./assets/js/main.js"></script>
     <!-- <script src="./assets/icons/fontawesome-free-6.4.0-web/js/all.js"></script> -->
 </body>
+
 </html>
