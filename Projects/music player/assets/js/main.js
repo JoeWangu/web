@@ -12,23 +12,23 @@ setInterval(updateDate, 1000);
 
 // music player starts here
 //assign all elements in the html to variables
-const now_playing = document.querySelector(".now-playing");
-const track_img = document.querySelector(".track-img");
-const track_name = document.querySelector(".track-name");
-const track_artist = document.querySelector(".track-artist");
+let now_playing = document.querySelector(".now-playing");
+let track_img = document.querySelector(".track-img");
+let track_name = document.querySelector(".track-name");
+let track_artist = document.querySelector(".track-artist");
 
-const playpause_btn = document.querySelector(".playpauseTrack");
-const next_btn = document.querySelector(".next-track");
-const prev_btn = document.querySelector(".prev-track");
+let playpause_btn = document.querySelector(".play-pause");
+let next_btn = document.querySelector(".next");
+let prev_btn = document.querySelector(".prev");
 
-const seek_slider = document.querySelector("#progress");
-const volume_slider = document.querySelector(".volume-slider");
-const curr_time = document.querySelector(".start-time");
-const total_duration = document.querySelector(".end-time");
+let seek_slider = document.querySelector("#progress");
+let volume_slider = document.querySelector(".volume-slider");
+let curr_time = document.querySelector(".start-time");
+let total_duration = document.querySelector(".end-time");
 
 // specify globally used values
-const track_index = 0;
-const isPlaying = false;
+let track_index = 0;
+let isPlaying = false;
 let updateTimer;
 
 
@@ -36,32 +36,58 @@ let updateTimer;
 let curr_track = document.createElement("audio");
 
 //define the list of tracks that have to be played
-let track_list = [
-    {
-        name: "Running Up That Hill",
-        artist: "Kim Petras",
-        image: "https://i.ytimg.com/vi/rfiQIHUmG7I/maxresdefault.jpg",
-        path: "./assets/ymusic/Kim Petras - Running Up That Hill.mp3",
-    },
-    {
-        name: "Never Really Loved Me",
-        artist: "Kygo and Dean Lewis.mp3",
-        image: "https://i.ytimg.com/vi/RfZvyyAgGCA/maxresdefault.jpg",
-        path: "./assets/ymusic/Kygo, Dean Lewis - Never Really Loved Me.mp3",
-    },
-    {
-        name: "YOU MAKE ME FEEL LIKE IT'S HALLOWEEN",
-        artist: "MUSE",
-        image: "https://i.ytimg.com/vi/oyu1WO0hRB0/maxresdefault.jpg",
-        path: "./assets/ymusic/MUSE - YOU MAKE ME FEEL LIKE IT'S HALLOWEEN.mp3",
-    },
-    {
-        name: "Look At Me",
-        artist: "XXXTENTACION",
-        image: "https://i.ytimg.com/vi/mIl8ar3ErgU/maxresdefault.jpg",
-        path: "./assets/ymusic/XXXTENTACION - Look At Me.mp3",
+// let track_list = [
+//     {
+//         name: "Running Up That Hill",
+//         artist: "Kim Petras",
+//         image: "https://i.ytimg.com/vi/rfiQIHUmG7I/maxresdefault.jpg",
+//         path: "./assets/ymusic/Kim Petras - Running Up That Hill.mp3",
+//     },
+//     {
+//         name: "Never Really Loved Me",
+//         artist: "Kygo and Dean Lewis.mp3",
+//         image: "https://i.ytimg.com/vi/RfZvyyAgGCA/maxresdefault.jpg",
+//         path: "./assets/ymusic/Kygo, Dean Lewis - Never Really Loved Me.mp3",
+//     },
+//     {
+//         name: "YOU MAKE ME FEEL LIKE IT'S HALLOWEEN",
+//         artist: "MUSE",
+//         image: "https://i.ytimg.com/vi/oyu1WO0hRB0/maxresdefault.jpg",
+//         path: "./assets/ymusic/MUSE - YOU MAKE ME FEEL LIKE IT'S HALLOWEEN.mp3",
+//     },
+//     {
+//         name: "Look At Me",
+//         artist: "XXXTENTACION",
+//         image: "https://i.ytimg.com/vi/mIl8ar3ErgU/maxresdefault.jpg",
+//         path: "./assets/ymusic/XXXTENTACION - Look At Me.mp3",
+//     }
+// ];
+
+// < !--Add this input element to your HTML file-- >
+// <input type="file" id="file-input" multiple>
+
+/* Modify your JavaScript code to dynamically add tracks to the track_list array */
+let track_list = []; // initialize an empty array
+
+// Listen for changes to the file input element
+let fileInput = document.getElementById("file-input");
+fileInput.addEventListener("change", (event) => {
+    let files = event.target.files; // get the selected files
+
+    // Iterate over each file and add a new track to the track_list array
+    for (let file of files) {
+        let track = {
+            name: file.name,
+            path: URL.createObjectURL(file), // use createObjectURL to generate a URL for the selected file
+            image: "",
+        };
+        track_list.push(track);
     }
-];
+
+    console.log(track_list); // log the updated track list to the console
+    loadTrack(track_index);
+});
+
 
 function loadTrack(track_index) {
     //clear the previous seek timer
@@ -76,8 +102,10 @@ function loadTrack(track_index) {
     track_name.textContent = track_list[track_index].name;
     track_artist.textContent = track_list[track_index].artist;
     now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
-    track_img.style.backgroundImage = "url(" + track_list[track_index].image + ")";
-    
+    // track_img.style.backgroundImage = "url("+ track_list[track_index].image +")";
+    // track_img.src = track_list[track_index].image;
+    if (track_list[track_index].image == "") track_img.src = "./assets/media/profile.png"
+    else track_img.src = track_list[track_index].image
 
     //set an interval of 1000 milliseconds for updating the seek slider
     updateTimer = setInterval(seekUpdate, 1000);
@@ -87,6 +115,7 @@ function loadTrack(track_index) {
 
     //apply a random background color
     random_bg_color();
+    setVolume();
 }
 
 function random_bg_color() {
@@ -107,6 +136,7 @@ function resetValues() {
     curr_time.textContent = "00:00";
     total_duration.textContent = "00:00";
     seek_slider.value = 0;
+    volume_slider.value = 10;
 }
 
 function playpauseTrack() {
@@ -193,4 +223,4 @@ function seekUpdate() {
 }
 
 //load the first track in the tracklist
-loadTrack(track_index);
+// loadTrack(track_index);

@@ -33,18 +33,19 @@
 
             <!--  image and text of the music playing  -->
             <div class="track">
-                <img src="./assets/media/profile.png" alt="mp" class="track-img buttons">
+                    <img src="" alt="" class="track-img">
+                <!-- <img src="" alt="mp" class="track-img buttons"> -->
                 <!-- mp = music playing -->
 
-                <p class="track-name">Low Life</p>
-                <p class="track-artist">Future ft The Weekend</p>
+                <p class="track-name"></p>
+                <p class="track-artist"></p>
             </div>
 
             <!-- player container controls -->
             <div class="controls">
                 <div class="progress-time">
-                    <p class="start-time">2:20</p>
-                    <p class="end-time">4:50</p>
+                    <p class="start-time"></p>
+                    <p class="end-time"></p>
                 </div>
                 <!-- <progress value="50" max="100">50%</progress> -->
                 <input type="range" min="1" max="100" value="0" id="progress" onchange="seekTo()">
@@ -72,6 +73,8 @@
             <input type="range" min="0" max="100" value="10" class="volume-slider" onchange="setVolume()">
             <i class="fa fa-volume-up buttons"></i>
         </div>
+
+        <input type="file" id="file-input" multiple>
 
         <p id="date"></p>
     </div>

@@ -58,11 +58,12 @@
 .track-img {
     width: 200px;
     height: 200px;
-    background-color: darkgray;
+    background-color: #ffffff;
+    border-radius: 10px;
 }
 
 .track-name {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .track-artist- {
