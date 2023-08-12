@@ -109,7 +109,7 @@ nav{
 
 /* Hero section styles */
 .hero-section {
-    background-image: url(/media/5172658.jpg);
+    background-image: url(./media/5172658.jpg);
     background-size: cover;
     background-position: center;
     height: 500px;
