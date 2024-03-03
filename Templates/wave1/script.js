@@ -1,0 +1,1 @@
+document.querySelectorAll('h1').forEach(h1 => { h1.innerHTML = h1.textContent.replace(/\S/g, "<span style='--i:$&'>$&</span>"); });
