@@ -3,7 +3,8 @@ const express = require('express');
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
 const bodyParser = require('body-parser');
-const mysql = require('mysql2/promise');
+const mysql = require('mysql');
+// const mysql = require('mysql2/promise');
 const { check, validationResult } = require('express-validator');
 const app = express();
 
@@ -63,7 +64,7 @@ const User = {
 
 // Registration route
 app.post('/register', [
-    // Validate emall and username fields
+    // Validate email and username fields
     check('email').isEmail(),
     check('username').isAlphanumeric().withMessage('Username must be alphanumeric'),
 
